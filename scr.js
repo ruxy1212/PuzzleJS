@@ -26,9 +26,9 @@ const emptyCell = document.querySelector('.empty-cell');
 let rand = Math.floor(Math.random() * 2);
 let gamePic = pcs[difficulty][rand];
 cells.forEach((cell) => {
-    cell.style.backgroundImage = `url(${gamePic})`;
+    cell.style.backgroundImage = `url(img/${gamePic})`;
 });
-emptyCell.style.backgroundImage = `url(${gamePic})`;
+emptyCell.style.backgroundImage = `url(img/${gamePic})`;
 
 const imageSize = 360; // Adjust based on full image size
 const cellSize = imageSize/difficulty;
