@@ -1,0 +1,136 @@
+/* .game-board {
+    width: 300px;
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    background-size: 300px 300px; 
+    cursor: pointer;
+}
+
+.empty-cell {
+    width: 100px;
+    height: 100px;
+    border: 1px dashed black;
+} */
+
+* {
+    box-sizing: border-box;
+}
+
+.game-area {
+    display: flex;
+    justify-content: center;
+}
+
+.game-board {
+    width: 360px;
+    /* max-width: 80%; */
+    display: grid;
+    /* gap: 2px; */
+    position: relative;
+}
+
+.game-3{
+    --cell-size-3: 120px;
+    grid-template-columns: repeat(3, var(--cell-size-3));
+    grid-template-rows: repeat(3, var(--cell-size-3));
+    /* grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px); */
+}
+
+.game-4{
+    grid-template-columns: repeat(4, 90px);
+    grid-template-rows: repeat(4, 90px);
+}
+
+.game-5{
+    grid-template-columns: repeat(5, 72px);
+    grid-template-rows: repeat(5, 72px);
+}
+
+.game-6{
+    grid-template-columns: repeat(6, 60px);
+    grid-template-rows: repeat(6, 60px);
+}
+
+.cell {
+    border: 1px solid #333;
+    /* background-image: url('RiriY.PNG'); */
+    background-size: 360px 360px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.cell-3 {
+    width: var(--cell-size-3);
+    height: var(--cell-size-3);
+}
+
+.cell-4 {
+    width: 90px;
+    height: 90px;
+}
+
+.cell-5 {
+    width: 72px;
+    height: 72px;
+}
+
+.cell-6 {
+    width: 60px;
+    height: 60px;
+}
+
+.active{
+    border-color: blue;
+    border-width: 2px;
+}
+
+.text-cell-3{
+    /* width: 100px;
+    height: 100px; */
+    /* border: 1px dashed black; */
+    grid-column: span 2;
+}
+
+.text-cell-4{
+   grid-column: span 3;
+}
+
+.text-cell-5{
+    grid-column: span 4;
+ }
+
+ .text-cell-6{
+    grid-column: span 5;
+ }
+
+.empty-cell {
+    border: 1px dashed black;
+    /* background-image: url('RiriY.PNG'); */
+    background-size: 360px 360px; 
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.currently-empty{
+    background-position: 360px 0px !important;
+    background-color: #333;
+}
+
+.timer{
+    position: absolute;
+    top:20px;
+    right:20px;
+}
+
+.timer.red{
+    color: red;
+}
