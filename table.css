@@ -1,0 +1,115 @@
+.game-levels{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0;
+}
+.modal__container.info td,
+.modal__container.info tr {
+    text-align: left;
+    padding: 12px 0;
+    /* font-family: "kanit", sans-serif; */
+}
+.modal__container.info td {
+    cursor: pointer;
+}
+.modal__container.info tr td:first-child {
+    position: relative;
+    font-weight: bold;
+    padding-right: 20px;
+}
+.modal__container.info td div {
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    background-color: var(--grey);
+    left: 0;
+    border-radius: 50%;
+}
+.modal__container.info td div img {
+    position: absolute;
+    inset: 0 0;
+    margin: auto;
+    width: 60%;
+    height: 60%;
+}
+.modal__container.info th {
+    padding: 1rem 0;
+    border-spacing: none;
+    /* border-bottom: 2px solid black; */
+    position: relative;
+    font-family: "Roboto", sans-serif;
+}
+
+.table-heading {
+    border-spacing: 3rem;
+}
+
+@media (max-width: 767px){
+    .game-levels{
+        padding: 0;
+    }
+    .modal__container.info table,
+    .modal__container.info thead,
+    .modal__container.info tbody,
+    .modal__container.info th,
+    .modal__container.info td,
+    .modal__container.info tr {
+        display: block;
+    }
+    .modal__container.info td,
+    .modal__container.info tr {
+        padding: 0.3rem;
+    }
+    .modal__container.info thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    .modal__container.info td {
+        /* Behave  like a "row" */
+        border: none;
+        position: relative;
+        padding-left: 40%;
+        transform: translateY(-0.4rem);
+        font-size: 14px;
+    }
+    .modal__container.info tr td:first-child {
+        position: relative;
+        padding-left: 38%;
+    }
+    .modal__container.info td:before {
+        position: absolute;
+        left: 0px;
+        width: 16%;
+        font-weight: 700;
+        white-space: nowrap;
+        font-family: "Roboto";
+        font-size: 1.1em;
+    }
+    .modal__container.info td div {
+        left: 25%;
+        width: 1.5rem;
+        height: 1.5rem;
+        transform: translatey(0.1rem);
+    }
+    .modal__container.info td div .method-img {
+        width: 1.2rem;
+        height: 1.2rem;
+    }
+    .modal__container.info td:nth-of-type(1):before {
+        content: "";
+    }
+    .modal__container.info td:nth-of-type(2):before {
+        content: "Movement:";
+    }
+    .modal__container.info td:nth-of-type(3):before {
+        content: "Pieces:";
+    }
+    .modal__container.info td:nth-of-type(4):before {
+        content: "Time:";
+    }
+    .modal__container.info td button {
+        width: fit-content;
+        padding: 1rem 2rem;
+    }
+}

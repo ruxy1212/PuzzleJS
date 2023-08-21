@@ -268,7 +268,7 @@ function moveCell(index) {
         cellSelected = null;
         hasMadeMove = true;
     }else if(cellSelected !== null && index !== currentEmpty && index !== cellSelected){
-        if(difficulty === 3){
+        if(difficulty === 6){
             [cellOrder[index], cellOrder[cellSelected]] = [cellOrder[cellSelected], cellOrder[index]];
             cells[cellSelected].classList.remove('active');
             updateCellPositions();
@@ -334,15 +334,15 @@ function sortScore(array){
 }
 
 function isAdjacent(rows, index, selectedCell) {
-    if(rows === 4 || rows === 3) return true;
+    if(rows === 6 || rows === 5) return true;
     let indexRow = Math.floor(index/rows);
     let indexCol = index % rows;
     let selectedRow = Math.floor(selectedCell/rows);
     let selectedCol = selectedCell % rows;
     let rowDiff = Math.abs(indexRow - selectedRow);
     let colDiff = Math.abs(indexCol - selectedCol);
-    if(rows === 5) return (rowDiff <= 1 && colDiff <= 1) && (rowDiff + colDiff > 0);
-    else if(rows === 6) return (rowDiff === 1 && colDiff === 0) || (rowDiff === 0 && colDiff === 1);
+    if(rows === 4) return (rowDiff <= 1 && colDiff <= 1) && (rowDiff + colDiff > 0);
+    else if(rows === 3) return (rowDiff === 1 && colDiff === 0) || (rowDiff === 0 && colDiff === 1);
 }
 
 function goHome(){ 

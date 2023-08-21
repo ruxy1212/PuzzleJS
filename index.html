@@ -3,17 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PuzzleJS</title>
     <link rel="stylesheet" href="style.css">
-    <title>Puzzle Game</title>
+    <style>
+        body{
+            background: radial-gradient(circle, #0067, #0f4f96, #1b2949, #000);
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        .stone-container-chiseled{
+            height: 100vh !important;
+        }
+    </style>
 </head>
 <body>
-    <div class="timer"></div>
-    <div class="game-area">
-        <div class="game-board"></div>
+    <div class="container">
+        <div class="stone-container-chiseled">
+            <button class="stone-button-chiseled" onclick="window.location = 'mode1.html'">
+                <img src="img/917.png" alt="Custom Button" class="button-image drop__pp">
+                <img src="img/917.png" alt="Custom Button" class="button-image no__pp">
+                <span class="button-text flexx">Play Mode 1</span>
+            </button>
+            <button class="stone-button-chiseled" onclick="window.location = 'mode2.html'">
+                <img src="img/917.png" alt="Custom Button" class="button-image drop__pp">
+                <img src="img/917.png" alt="Custom Button" class="button-image no__pp">
+                <span class="button-text flexx">Play Mode 2</span>
+            </button>
+        </div>
     </div>
-    <button onclick="newGame()">Start New Game</button>
-    <button>Back To Home</button>
-    <button>Show Hint</button>
-    <script src="scr.js"></script>
 </body>
 </html>

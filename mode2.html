@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="table.css">
+    <link href="ctm.css" rel="stylesheet">
+    <link href="3d.css" rel="stylesheet">
+    <script src="modernizr_2.8.3_modernizr.min.js" type="text/javascript"></script>
+    <title>Puzzle JS</title>
+</head>
+<body>
+    <div class="body-div">
+        <div>
+            <div class="stage">
+                <div class="layer"></div>
+                <div class="layer"></div>
+                <div class="layer"></div>
+                <div class="layer"></div>
+                <div class="layer"></div>
+                <div class="layer"></div>
+                <div class="layer"></div>
+                <div class="layer"></div>
+                <div class="layer"></div>
+                <div class="layer"></div>
+                <div class="layer"></div>
+                <div class="layer"></div>
+                <div class="layer"></div>
+                <div class="layer"></div>
+                <div class="layer"></div>
+                <div class="layer"></div>
+                <div class="layer"></div>
+                <div class="layer"></div>
+                <div class="layer"></div>
+                <div class="layer"></div>
+            </div>
+            <div class="info-btn">
+                <button class="stone-button-chiseled" onclick="showInfo()">
+                    <img src="img/917.png" alt="Custom Button" class="button-image drop__pp">
+                    <img src="img/917.png" alt="Custom Button" class="button-image no__pr">
+                    <span class="button-text flexx uncapitalize">Info/Credits <img class="btn_chi_icon" src="img/info.png"></span>
+                </button>
+            </div>
+            <div class="otherDetails">
+                <div>
+                    <h1 class="home-head">START</h1>
+                    <div class="custom-select cnt">
+                        <select>
+                            <option value="3">Easy</option>
+                            <option value="4">Medi</option>
+                            <option value="5">Hard</option>
+                            <option value="6">Supe</option>
+                        </select>
+                    </div>
+                    <div class="btn-align-right">
+                        <button class="stone-button-chiseled" onclick="firstPlay()">
+                            <img src="img/917.png" alt="Custom Button" class="button-image drop__pp">
+                            <img src="img/917.png" alt="Custom Button" class="button-image no__pr more">
+                            <span class="button-text flexx uncapitalize">Play <img class="btn_chi_icon" src="img/play.png"></span>
+                        </button>
+                    </div>
+                </div>
+                <div>
+                    <h1 class="home-head">HIGH SCORES</h1>
+                    <div class="twin-table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Easy</th>
+                                    <th>Medi</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2</td>
+                                    <td>4</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>4</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>4</td>
+                                </tr>
+                                <tr>
+                                    <td>12</td>
+                                    <td>8</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>4</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Hard</th>
+                                    <th>Supe</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2</td>
+                                    <td>4</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>4</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>4</td>
+                                </tr>
+                                <tr>
+                                    <td>12</td>
+                                    <td>8</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>4</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="game-page unsee-special">
+        <div class="game-head">
+            <div class="head-stone-container">
+                <div class="home__bg bg__container" onclick="goHome();">
+                    <div class="no__pp"></div>
+                    <div class="bg__container">
+                        <img class="btn__icon" src="img/home.png">
+                        <div class="home_btn">Home</div>
+                    </div>
+                </div>
+                <div class="timer__bg bg__container unsee">
+                    <div class="bg__container">
+                        <img class="btn__icon" src="img/time.png">
+                        <div class="timer"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="game-area">
+            <div class="game-container">
+                <div class="game-board"></div>
+            </div>
+        </div>
+        <div class="game-foot">
+            <div class="stone-container-chiseled">
+                <button class="stone-button-chiseled" onclick="newGame()">
+                    <img src="img/917.png" alt="Custom Button" class="button-image drop__pp">
+                    <img src="img/917.png" alt="Custom Button" class="button-image no__pp">
+                    <span class="button-text btn-text-wide flexx">Restart <img class="btn_chi_icon" src="img/replay.png"></span>
+                </button>
+                <button class="stone-button-chiseled" onclick="showHint()">
+                    <img src="img/917.png" alt="Custom Button" class="button-image drop__pp">
+                    <img src="img/917.png" alt="Custom Button" class="button-image no__pp">
+                    <span class="button-text btn-text-wide flexx">Hint <img class="btn_chi_icon" src="img/info.png"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="modal__container hint unsee">
+        <div>
+            <button class="stone-button-chiseled modal-abs-btn" onclick="closeModal('hint')">
+                <img src="img/917.png" alt="Custom Button" class="button-image drop__pp">
+                <img src="img/917.png" alt="Custom Button" class="button-image no__rr">
+                <span class="button-text">X</span>
+            </button>
+            <div class="modal__box hint">
+                <img class="modal__hint" src="img/haiyrea.jpg">
+            </div>
+        </div>
+    </div>
+    <div class="modal__container game unsee">
+        <div>
+            <div class="modal__box">
+                <h1 class="font-sha3d">Oops!</h1>
+                <p class="text2d text-blink"><span class="font-tech">YOUR TIME ELAPSED<span></p>
+                <p class="high-score unsee">New High Score!</p>
+                <div class="modal-btn-container mt-10">
+                    <button class="stone-button-chiseled" onclick="goHome()">
+                        <img src="img/917.png" alt="Custom Button" class="button-image drop__pp">
+                        <img src="img/917.png" alt="Custom Button" class="button-image no__pp">
+                        <span class="button-text font-choco">Back to Home</span>
+                    </button>
+                    <button class="stone-button-chiseled" onclick="endRestart()">
+                        <img src="img/917.png" alt="Custom Button" class="button-image drop__pp">
+                        <img src="img/917.png" alt="Custom Button" class="button-image no__pp">
+                        <span class="button-text font-choco">Play Again</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal__container confirm unsee">
+        <div>
+            <div class="modal__box">
+                <h1 class="font-sha3d">You will lose current progress, continue?</h1>
+                <div class="modal-btn-container mt-10">
+                    <button class="stone-button-chiseled" onclick="endRestart(3)">
+                        <img src="img/917.png" alt="Custom Button" class="button-image drop__pp">
+                        <img src="img/917.png" alt="Custom Button" class="button-image no__pp">
+                        <span class="button-text font-choco">Go Back</span>
+                    </button>
+                    <button class="stone-button-chiseled" onclick="endRestart(2)">
+                        <img src="img/917.png" alt="Custom Button" class="button-image drop__pp">
+                        <img src="img/917.png" alt="Custom Button" class="button-image no__pp">
+                        <span class="button-text font-choco">Proceed</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal__container info unsee">
+        <div>
+            <button class="stone-button-chiseled modal-abs-btn" onclick="closeModal('info')">
+                <img src="img/917.png" alt="Custom Button" class="button-image drop__pp">
+                <img src="img/917.png" alt="Custom Button" class="button-image no__rr">
+                <span class="button-text">X</span>
+            </button>
+            <div class="modal__box" data-scrollbar>
+                <h1 class="home-head">About PuzzleJS</h1>
+                <p class="info-text-all">PuzzleJS is a Javascript game where a picture is stuck onto wooden surface and divided into pieces of different sizes, depending on the difficulty level. Each piece must be correctly put in its original place to complete the game. Enjoy!</p>
+                <div class="game-levels">
+                    <h1 class="home-head">Difficulty Levels</h1>
+                    <table>
+                        <thead>
+                            <tr class="table-heading info-text-all">
+                                <th></th>
+                                <th>Movement Allowed</th>
+                                <th>Pieces</th>
+                                <th>Time Limit</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="info-text-all">
+                                <td>Easy</td>
+                                <td>Straight only</td>
+                                <td>9</td>
+                                <td>No limit</td>
+                            </tr>
+                            <tr class="info-text-all">
+                                <td>Medi</td>
+                                <td>Straight + Diagonal</td>
+                                <td>16</td>
+                                <td>No limit</td>
+                            </tr>
+                            <tr class="info-text-all">
+                                <td>Hard</td>
+                                <td>Free movement</td>
+                                <td>25</td>
+                                <td>360 seconds</td>
+                            </tr>
+                            <tr class="info-text-all">
+                                <td>Supe</td>
+                                <td>Free + Piece-switching</td>
+                                <td>36</td>
+                                <td>180 seconds</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h1 class="home-head">Credits</h1>
+                <div>
+                    <ul class="info-text-all">
+                        <li>
+                            <p><a class="credit-link" href="https://github.com/devprincess">devprincess</a></p>
+                        </li>
+                        <li>
+                            <p><a class="credit-link" href="https://github.com/Ruxy1212">Ruxy1212</a></p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="screverse.js"></script>
+    <style>
+        * *, *::before, *::after { 
+          animation-play-state: running !important;
+        }
+        
+    </style>
+    <script src="ctm.js"></script>
+    <script src="smooth-scrollbar.js"></script>
+    <script>
+        var Scrollbar = window.Scrollbar; 
+        Scrollbar.initAll(document.querySelector('.modal__box'));
+    </script>
+</body>
+</html>
