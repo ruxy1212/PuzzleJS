@@ -1,3 +1,4 @@
+
 var difficulty = 3, localSetting = {level:difficulty, highScore: {3:[], 4:[], 5:[], 6:[] }};
 const settings = JSON.parse(localStorage.getItem('puzzleJS'));
     if (settings) {
